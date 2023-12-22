@@ -1,0 +1,19 @@
+# Declare a variable called meal and assign it the value 44.50
+meal = 44.50
+
+# Calculate the decimal value of 6.75%
+tax_percentage = 6.75
+tax = tax_percentage / 100
+
+# Calculate the decimal value of 15%
+tip_percentage = 15.0
+tip = tip_percentage / 100
+
+# Reassign meal to the value of itself + itself * tax
+meal = meal + meal * tax
+
+# Create a variable total that is equal to meal + meal * tip
+total = meal + meal * tip
+
+# Print out the value of total
+print total
