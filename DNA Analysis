@@ -1,0 +1,36 @@
+# List of codons
+codons = ["GTA", "GGG", "CAC"]
+
+# Step 21: Define the match_dna method
+def match_dna(dna):
+    matches = 0
+    for codon in dna:
+        if codon in codons:
+            matches += 1
+    return matches
+
+# Step 22: Define the is_criminal method
+def is_criminal(dna_sample):
+    # Step 23: Read in DNA samples and create a string to hold them
+    dna_data = read_dna(dna_sample)
+    
+    # Step 24: Call the dna_codons method to chop the string into a list of codons
+    codons = dna_codons(dna_data)
+    
+    # Step 25: Match the sample with the DNA
+    num_matches = match_dna(codons)
+    
+    # Step 26: Add an if statement to check if the number of matches is significant
+    if num_matches >= 3:
+        # Step 27: Print out the number of matches and a message to continue the investigation
+        print(f"Number of matches: {num_matches}")
+        print("Investigation should continue.")
+    else:
+        # Step 28: Print the number of matches and a message that the suspect can be freed
+        print(f"Number of matches: {num_matches}")
+        print("Suspect can be freed.")
+
+# Step 29: Call the is_criminal method on the .txt files
+is_criminal("suspect1.txt")
+is_criminal("suspect2.txt")
+is_criminal("suspect3.txt")
